@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -187,7 +188,7 @@ h6{
 <body>
     <div class="navbar">
         <div class="brand">
-          <img style="height:50px;" src="https://i.ibb.co/KXdNMBt/Untitled5.png" alt="FlowScripts"></div>
+          <img class="flowscripts-logo-top" style="height:50px;" src="https://i.ibb.co/KXdNMBt/Untitled5.png" alt="FlowScripts"></div>
        <a href="https://flowscripts.github.io/account"> 
         <div class="toggle-button">Account</div>
       </a>  <div class="menu">
@@ -329,9 +330,12 @@ background: linear-gradient(131deg, rgba(107,124,255,1) 0%, rgba(160,171,255,1) 
         <h2>HTML</h2>
         <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
         <ul style="text-align: left;" id="myMenu">
-          <li><a href="#">Basic Text</a></li>
-          <li><a href="#">Images</a></li>
-          <li><a href="#">Simple Form</a></li>
+          <li><a href="https://flowscripts.github.io/element-basictext">Basic Text</a></li>
+          <li><a href="https://flowscripts.github.io/element-images">Images</a></li>
+          <li><a href="https://flowscripts.github.io/element-hyperlinks">Hyperlinks</a></li> 
+          <li><a href="https://flowscripts.github.io/element-simpleform">Simple Form</a></li>
+          <li><a href="https://flowscripts.github.io/element-videos">Videos</a></li> 
+          <li><a href="https://flowscripts.github.io/element-audio">Audio</a></li> 
           <li><a href="#">Search Box</a></li>
           <li><a href="#">Hover Tab Menu</a></li>
           <li><a href="#">Top Menu</a></li>
@@ -410,7 +414,22 @@ background: linear-gradient(131deg, rgba(107,124,255,1) 0%, rgba(160,171,255,1) 
             to {
                 opacity: 1;
             }
-        }</style>
+        }
+        
+        .flowscripts-logo-top {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        
+        
+        </style>
 
 
       <div class="right" style="background-color:#ffffff;">
@@ -556,6 +575,7 @@ opacity: 0;
       <a href="https://flowscripts.github.io/register"> <div class="centered-div3">
        <a href="https://flowscripts.github.io/register" class="purple-link">Sign Up</a>
        </div></a>
+       
    </div>
    <div  class="container4">
      <a href="https://flowscripts.github.io/login"> <div class="centered-div3">
@@ -582,7 +602,7 @@ opacity: 0;
     <style>
       .button3 {
         border-radius: 8px;
-        background-color: #f4511e;
+        background-color: #3300ff;
         border: none;
         color: #FFFFFF;
         text-align: center;
