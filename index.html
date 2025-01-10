@@ -909,6 +909,7 @@ cursor: grab;
           padding: 10px;
             flex: 1;
         }
+      
         @media (max-width: 450px) {
             .buttons {
                 flex-direction: column;
@@ -966,6 +967,7 @@ cursor: grab;
         .quick-links a.clicked {
             color: rgb(0, 255, 0);
         }
+        .quick-links1{color: white;}
     </style>
 </head>
 <body>
@@ -974,9 +976,9 @@ cursor: grab;
     <div class="icon" onclick="showQuickLinks()">&#x22EE;</div>
     <div class="icon-x hidden" onclick="hideQuickLinks()">&#x2716;</div>
     <h2>Terms of Service</h2>
-    <h5>Read our terms</h5>
+    <h5>By clicking "Agree", you have read the <a class="quick-links1" href="https://flowscripts.github.io/terms">Terms</a>.</h5>
     <div class="buttons">
-        <button onclick="closeTerms()">Close</button>
+        <button class="close-div" onclick="closeTerms()">Close</button>
         <button onclick="agreeTerms()">Agree</button>
     </div>
     <h3 class="hidden">Thanks!</h3>
