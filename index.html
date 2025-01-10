@@ -866,11 +866,198 @@ cursor: grab;
 
 
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service</title>
+    <style>
+        .terms {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: opacity 1s ease, transform 0.5s ease;
+        }
+        .terms h2, .terms h5, .terms button {
+            margin: 10px 0;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .buttons button {
+          border-radius: 2px;
+          border-width: 0px;
+          background-color: white;
+          font-size: 20px;
+          padding: 10px;
+            flex: 1;
+        }
+        .buttons button:hover {
+          background-color: rgb(211, 211, 211);
+          font-size: 20px;
+          padding: 10px;
+            flex: 1;
+        }
+        @media (max-width: 450px) {
+            .buttons {
+                flex-direction: column;
+            }
+            .buttons button:first-child {
+                order: 2;
+            }
+            .buttons button:last-child {
+                order: 1;
+            }
+        }
+        @media (max-height: 426px) {
+            .terms {
+                display: none;
+            }
+        }
+        .hidden {
+            display: none;
+        }
+        .fade-out {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        .icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .icon-x {
+            position: absolute;
+            top: 10px;
+            right: 40px;
+            cursor: pointer;
+        }
+        @media (max-width: 500px) {
+            .icon {
+                display: none;
+            }
+        }
+        @media (max-width: 400px) {
+            .icon-x {
+                display: none;
+            }
+        }
+        .quick-links a {
+            color: white;
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+        }
+        .quick-links a:hover {
+            color: red;
+        }
+        .quick-links a.clicked {
+            color: rgb(0, 255, 0);
+        }
+    </style>
+</head>
 <body>
- 
 
+<div class="terms">
+    <div class="icon" onclick="showQuickLinks()">&#x22EE;</div>
+    <div class="icon-x hidden" onclick="hideQuickLinks()">&#x2716;</div>
+    <h2>Terms of Service</h2>
+    <h5>Read our terms</h5>
+    <div class="buttons">
+        <button onclick="closeTerms()">Close</button>
+        <button onclick="agreeTerms()">Agree</button>
+    </div>
+    <h3 class="hidden">Thanks!</h3>
+    <div class="quick-links hidden">
+        <h3>Quick Links</h3>
+
+        <a href="https://flowscripts.github.io/editor" onclick="handleLinkClick(event)">Live Code Editor</a>
+        <a href="https://flowscripts.github.io/tutorial" onclick="handleLinkClick(event)">Tutorial</a>
+        <a href="https://flowscripts.github.io/register" onclick="handleLinkClick(event)">Register</a>
+        <a href="https://flowscripts.github.io/login" onclick="handleLinkClick(event)">Log In</a>
+        <a href="https://flowscripts.github.io/forgot" onclick="handleLinkClick(event)">Forgot Password</a>
+    </div>
+</div>
+
+<script>
+    function closeTerms() {
+        document.querySelector('.terms').style.transform = 'translateY(100%)';
+        document.querySelector('.terms').style.transition = 'transform 0.5s ease';
+        setTimeout(() => {
+            document.querySelector('.terms').style.display = 'none';
+        }, 500);
+    }
+
+    function agreeTerms() {
+        document.querySelector('.terms h2').classList.add('hidden');
+        document.querySelector('.terms h5').classList.add('hidden');
+        document.querySelector('.buttons').classList.add('hidden');
+        document.querySelector('.terms h3').classList.remove('hidden');
+        setTimeout(() => {
+            document.querySelector('.terms').classList.add('fade-out');
+        }, 2000);
+        setTimeout(() => {
+            document.querySelector('.terms').style.display = 'none';
+            localStorage.setItem('termsAgreed', 'true');
+        }, 3000);
+    }
+
+    function showQuickLinks() {
+        document.querySelector('.terms h2').classList.add('hidden');
+        document.querySelector('.terms h5').classList.add('hidden');
+        document.querySelector('.buttons').classList.add('hidden');
+        document.querySelector('.terms .quick-links').classList.remove('hidden');
+        document.querySelector('.icon').classList.add('hidden');
+        document.querySelector('.icon-x').classList.remove('hidden');
+    }
+
+    function hideQuickLinks() {
+        document.querySelector('.terms h2').classList.remove('hidden');
+        document.querySelector('.terms h5').classList.remove('hidden');
+        document.querySelector('.buttons').classList.remove('hidden');
+        document.querySelector('.terms .quick-links').classList.add('hidden');
+        document.querySelector('.icon').classList.remove('hidden');
+        document.querySelector('.icon-x').classList.add('hidden');
+    }
+
+    function handleLinkClick(event) {
+        event.preventDefault();
+        const link = event.target;
+        link.classList.add('clicked');
+        setTimeout(() => {
+            window.location.href = link.href;
+        }, 400);
+    }
+
+    window.onload = function() {
+        if (localStorage.getItem('termsAgreed') === 'true') {
+            document.querySelector('.terms').style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
+
+
+
+  
 
 
 </body>
 </html>
+
+
+
