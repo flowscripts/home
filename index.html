@@ -337,16 +337,11 @@ background: linear-gradient(131deg, rgba(0,94,255,1)
       padding: 12px;
       text-decoration: none;
       color: black;
-      display: block
-       
+      display: block;
+
     }
     
-    #myMenu li a:hover {
-
-        border-radius: 14px;
-        background: rgb(255,255,255);
-        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(183,188,228,1) 100%);;
-    }
+   
     </style>
     </head>
     <body>
@@ -428,8 +423,22 @@ background: linear-gradient(131deg, rgba(107,124,255,1) 0%, rgba(160,171,255,1) 
           <li><a href="https://flowscripts.github.io/templates">Website Templates     </a></li> 
         </ul>
       </div>
+ 
+      <style>
       
-
+        #myMenu li a {
+            
+           
+            
+            transition: background-color 0.1s ease
+        }
+        #myMenu li a:hover {
+            
+            background-color: rgb(202, 200, 255);
+            border-radius: 5px;
+        }
+      </style>
+      
       <style>   /* styles.css */
 
 
