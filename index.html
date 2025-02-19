@@ -681,6 +681,8 @@ background: linear-gradient(131deg, rgba(107,124,255,1) 0%, rgba(160,171,255,1) 
                 width: 100%;
             }
         }
+
+    
  
 
 
@@ -738,6 +740,27 @@ opacity: 0;
     border-radius: 10px;
     background: rgb(191,74,184);
     background: radial-gradient(circle, rgba(191,74,184,1) 0%, rgba(66,8,68,1) 100%);
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.5);
+-webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.5);
+
+color: white;
+
+opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+
+  }
+
+  .div-fade-12{
+    border-radius: 10px;
+    background: rgb(182,0,0);
+    background: radial-gradient(circle, rgba(182,0,0,1) 0%, rgba(80,1,1,1) 100%);
     box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.5);
 -webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.5);
 -moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.5);
@@ -822,8 +845,7 @@ cursor: grab;
 
        
       </style>
-  </head>
-  <body>
+
      
   
     <form>
@@ -843,6 +865,7 @@ cursor: grab;
     <button style="padding: 0px; " class="centered-div3" type="submit" formaction="https://flowscripts.github.io/editor"><p>Edit</p></button>
     </form>
 </div>
+
 <!--SIGN IN BOX-->
 
 <br>
@@ -916,8 +939,15 @@ cursor: grab;
       </div></a>
   </div>
     
-  
 
+    </div>
+    <div style="text-align: center; background: rgb(182,0,0);
+    background: radial-gradient(circle, rgba(182,0,0,1) 0%, rgba(80,1,1,1) 100%);" class="div-fade-3">
+      <h2 style="padding-top: 10px;" class="yellow-on-hover">3D Object Viewer</h2>
+        <p>This project is in beta version; testing is open to all.</p>
+        <form>
+          <button style="padding: 0px; " class="centered-div3" type="submit" formaction="https://flowscripts.github.io/3d"><p>Edit</p></button>
+          </form>
 </div>
 <br>
 <br>
