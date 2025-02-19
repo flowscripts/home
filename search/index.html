@@ -45,12 +45,6 @@ h6{
 } 
 
 </style>
-
-
-
-
-
-
     <style>
         body {
             margin: 0;
@@ -178,11 +172,6 @@ h6{
 
         .link-desktop{
           opacity: 0;
-          border-top-right-radius: 20px;
-          border-top-left-radius: 20px;
-          border-bottom-right-radius: 15px;
-          border-bottom-left-radius: 15px;
-          transition: background-color 0.2s ease;
             animation: fadeIn 1.2s ease-in forwards;
         }
         
@@ -198,8 +187,8 @@ h6{
     <div class="navbar">
         <div class="brand">
         <img class="flowscripts-logo-top" style="height:50px;" src="https://i.ibb.co/KXdNMBt/Untitled5.png" alt="FlowScripts"></div>
-       <a href="https://flowscripts.github.io/account"> 
-        <div class="toggle-button">Account</div>
+       <a href="https://flowscripts.github.io/"> 
+        <div class="toggle-button">Home</div>
       </a>  <div class="menu">
             <a class="link-desktop" href="https://flowscripts.github.io/home">Home</a>
           
@@ -267,25 +256,21 @@ background: linear-gradient(131deg, rgba(0,94,255,1)
 
 
 
+  
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100%; /* Just to create some scrolling effect */
+          background-image: url('https://nyuad.nyu.edu/en/news/latest-news/global-learning/2018/may/computer-science-beyond-coding/_jcr_content/newsarticlecomp/image.img.jpg');
+          background-size: cover;
+          background-attachment: fixed;
+          background-position: center;
+        }
+      </style>
+   
 
-    <style>
-        .left {
-            width: 33%;
-            float: left;
-        }
-        .right {
-            width: 67%;
-            float: left;
-        }
-        @media screen and (max-width: 1350px) {
-            .left {
-                display: none;
-            }
-            .right {
-                width: 100%;
-            }
-        }
-    </style>
+
 
 <style>
 
@@ -301,7 +286,7 @@ background: linear-gradient(131deg, rgba(0,94,255,1)
     
     /* Left column (menu) */
     .left {
-      flex: 33%;
+      flex: 45%;
       padding: 15px 0;
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
@@ -311,15 +296,29 @@ background: linear-gradient(131deg, rgba(0,94,255,1)
       padding-left: 8px;
     }
     
-    /* Right column (page content) */
-    .right {
-      flex: 67%;
-      padding: 15px;
-    }
-    
+ 
+        body {
+         
+            justify-content: center;
+            align-items: center;
+           
+            margin: 0;
+        }
+
+        .row {
+            width: 640px;
+        }
+
+        @media (max-width: 710px) {
+            .row {
+                width: 100%;
+            }
+        }
+   
+
     /* Style the search box */
     #mySearch {
-
+      width: 100%;
       border-radius: 20px;
       font-size: 18px;
       padding: 11px;
@@ -337,235 +336,195 @@ background: linear-gradient(131deg, rgba(0,94,255,1)
       padding: 12px;
       text-decoration: none;
       color: black;
-      display: block;
-
+      display: block
     }
     
-   
+    #myMenu li a:hover {
+        border-radius: 14px;
+        background: rgb(255,255,255);
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(183,188,228,1) 100%);;
+    }
     </style>
     </head>
     <body>
     
+ 
+    <div class="row">
+        <div class="left" style="background: rgb(107,124,255);
+        background: linear-gradient(131deg, rgba(107,124,255,1) 0%, rgba(160,171,255,1) 19%, rgba(160,171,255,1) 100%);">
+          <h2>HTML Elements</h2>
+               <style>
+
+                        .back-menu1{
+                      font-size: 12px;
+                        background-color: #1e00ff;
+                        color: white;
+                        border-radius: 20px;
+                        border-color: #fefefe00;
+                        
+
+                        }
+                        .back-menu1:hover{
+                            background-color: #5640ff; 
+                        }
+                        </style>
         
+               
             <style>
-                @keyframes dot-animation {
-                    0% { content: " Search Elements"; }
-                    25% { content: " Search Elements."; }
-                    50% { content: " Search Elements.."; }
-                    75% { content: " Search Elements..."; }
-                    100% { content: " Search Elements"; }
+                input::placeholder {
+                    color: black;
+                    opacity: 1;
+                    transition: opacity 0.5s ease-in-out;
                 }
-                
-                .searchdot::after {
-                    content: "Search Elements";
-                    animation: dot-animation 2s steps(4) infinite;
-                }
-            </style>   
-
-
-
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        .content {
-            display: inline-block;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="content">
-            <h1 style="font-size: 40px;" class="responsive-heading">FlowScripts</h1>
-<style>
-
-        .responsive-heading {
-            display: none;
-        }
-
-        @media (max-width: 600px) {
-            .responsive-heading {
-                display: block;
-            }
-        }
-
-
-        @media (max-width: 300px) {
-            .responsive-heading {
-               font-size: 30px;
-            }
-        }
-    
-
-</style>
-<img class="logo-main" src="https://i.ibb.co/bM7b3q3s/Untitled5-1.png">
-            <br>
-            <form action="https://flowscripts.github.io/search">
-                <button class="searcher" type="submit"><p class="searchdot"> </p></button>
-                </form> 
-                
-                
-                
-                <br>
-                <form>
-                    <button class="back-menu1" type="submit" formaction="https://flowscripts.github.io"><h3>Launch →</h3></button>
-                    </form>           </div>
-    </div>
-    <form>
-         </form>
-        <style>
-
-            .back-menu1{
-               font-size: large;
-            padding: 0px;
-            background-color: #1e00ff;
-            color: white;
-            border-radius: 20px;
-            border-color: #fefefe00;
-            
-            }
-            .back-menu1:hover{
-                background-color: #5640ff; 
-            }
             </style>
-
-
-
-
-<style>.searcher
-    {
         
-    
-                        padding: 1px;
-                        border: 1.75px solid grey;
-                        background-color: white;
-                        color: black;
-                        border-radius: 25px; /* Adjust border-radius as needed */
-                    
-                        font-size: 16px; /* Adjust font-size as needed */
-                    
-                   
         
-       width:500px; text-align: left;
-      
-      
-            }
            
-    .searcher:hover
-    {  border: 1.75px solid rgb(0, 0, 0);
-      cursor: text;
-    }</style>
-    <style> .logo-main
-    {width: 360px;}
+                <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+            
+                <script>
+                    let searchInput = document.getElementById('mySearch');
+                    let searchTexts = ['Search', 'Search.', 'Search..', 'Search...'];
+                    let index = 0;
+            
+                    function animateSearch() {
+                        searchInput.placeholder = searchTexts[index];
+                        index = (index + 1) % searchTexts.length;
+                    }
+            
+                    setInterval(animateSearch, 500);
+            
+                    function myFunction() {
+                        // Your existing myFunction logic
+                    }
+                </script>
+            
+            
+        
+        
+                <ul style="text-align: left;" id="myMenu">
+                  <li><a href="https://flowscripts.github.io/element-basictext">Basic Text </a></li>
+                  <li><a href="https://flowscripts.github.io/element-images">Images </a></li>
+                  <li><a href="https://flowscripts.github.io/element-hyperlinks">Hyperlinks </a></li> 
+                  <li><a href="https://flowscripts.github.io/element-simpleform">Simple Form </a></li>
+                  <li><a href="https://flowscripts.github.io/element-videos">Videos </a></li> 
+                  <li><a href="https://flowscripts.github.io/element-audio">Audio </a></li> 
+                  <li><a href="https://flowscripts.github.io/element-searchbox">Search Box </a></li>
+                  <li><a href="#">Hover Tab Menu </a></li>
+                  <li><a href="#">Responsive Top Menu </a></li>
+                  <li><a href="#">Gradient Div </a></li>
+                  <li><a href="#">Styled Buttons </a></li>
+                  <li><a href="#">Side Nav Bar </a></li>
+                  <li><a href="#">Login Page</a></li>
+                  <li><a href="#">Online Checkout</a></li>
+                  <li><a href="#">Social Bar</a></li>
+                  <li><a href="#">Color Changing Div</a></li>
+                  <li><a href="#">Image Slider</a></li>
+                  <li><a href="#">Pricing Table</a></li>
+                  <li><a href="#">Fade In &amp; Out</a></li>
+                  <li><a href="#">Download Buttons</a></li>
+                  <li><a href="#">Sign Up / Register</a></li>
+                  <li><a href="#">Toggle Switch</a></li>
+                  <li><a href="#">Upload File Button</a></li>
+                  <li><a href="#">Profile Div</a></li> 
+                  <li><a href="#">Buy Product Menu</a></li> 
+                  <li><a href="#">Text Toggle</a></li> 
+                  <li><a href="#">Hide/Show Toggle</a></li> 
+                  <li><a href="#">Animated Hover  </a></li> 
+        
+        
+        
+        
+        
+                  <li><a href="https://flowscripts.github.io/templates">Website Templates     </a></li> 
+                </ul>
+              </div>
+      
+
+      <style>   /* styles.css */
+
+
+        .fade-in-text {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+            user-select: none; /* Standard */
+            -webkit-user-select: none; /* Safari and Chrome */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in-text2 {
+            opacity: 0;
+            animation: fadeIn 1.2s ease-in forwards;
+            user-select: none; /* Standard */
+            -webkit-user-select: none; /* Safari and Chrome */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .fade-in-text3 {
+            opacity: 0;
+            animation: fadeIn 3s ease-in forwards;
+            user-select: none; /* Standard */
+            -webkit-user-select: none; /* Safari and Chrome */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+       
+        
+        .fade-in-text4 {
+            opacity: 0;
+            animation: fadeIn 3.8s ease-in forwards;
+            user-select: none; /* Standard */
+            -webkit-user-select: none; /* Safari and Chrome */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .flowscripts-logo-top {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+       
+
+        
+        </style>
+
+
     
-    @media (max-width: 900px) {
-        .logo-main {
-            width: 320px;
-        }
-    }
-
-
-    @media (max-width: 700px) {
-        .logo-main {
-            width: 300px;
-        }
-    }
-
-
-
-    @media (max-width: 600px) {
-        .logo-main {
-            width: 0px;
-        }
-    }
-
-   
-</style>
-
-
-<style>.logo-main2{
-
-    width:0px;
-}
-
-
-</style>
-
-     <style>
-        .searcher {
-            width: 615px;
-        }
-
-        @media (max-width: 900px) {
-            .searcher {
-                width: 500px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .searcher {
-                width:450px;
-            }
-        }
-
-        @media (max-width: 450px) {
-            .searcher {
-                width: 350px;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .searcher {
-                width: 340px;
-            }
-        }
-        @media (max-width: 350px) {
-            .searcher {
-                width: 330px;
-            }
-        }
-
-        @media (max-width: 333px) {
-            .searcher {
-                width: 280px;
-            }
-        }
-        @media (max-width: 290px) {
-            .searcher {
-                width: 250px;
-            }
-        }
-
-
-        @media (max-width: 260px) {
-            .searcher {
-                width: 210px;
-            }
-        }
-        @media (max-width: 220px) {
-            .searcher {
-                width: 175px;
-            }
-        }
-        @media (max-width: 180px) {
-            .searcher {
-                width: 150px;
-            }
-        }
-        @media (max-width: 155px) {
-            .searcher {
-                width: 100px;
-            }
-        }
-
-
-    </style>
+    </div>
+    
     <script>
     function myFunction() {
       var input, filter, ul, li, a, i;
@@ -603,7 +562,7 @@ background: linear-gradient(131deg, rgba(0,94,255,1)
 
   .kot-567
   {
-    background-color: #ffffff;
+    background-color: #ddd;
   }
 </style> 
 
@@ -614,10 +573,23 @@ background: linear-gradient(131deg, rgba(0,94,255,1)
 
 
 
+  <style>
 
 
+    @media screen and (min-height: 1746px) {
+      .kot-567 {
+        height: 839px;
+      }
+    }
+  </style>
 
 
+  
+
+
+<form>
+    <button class="back-menu1" type="submit" formaction="https://flowscripts.github.io"><h3>← Back Home</h3></button>
+    </form> 
 <div class="kot-567">
   
 <br>
@@ -744,27 +716,6 @@ background: linear-gradient(131deg, rgba(0,94,255,1)
 </head>
 <body>
 
-<div class="terms">
-    <div class="icon" onclick="showQuickLinks()">&#x22EE;</div>
-    <div class="icon-x hidden" onclick="hideQuickLinks()">&#x2716;</div>
-    <h2>Terms of Service</h2>
-    <h5>By clicking "Agree", you have read the <a class="quick-links1" href="https://flowscripts.github.io/terms">Terms</a>.</h5>
-    <div class="buttons">
-        <button class="close-div" onclick="closeTerms()">Close</button>
-        <button onclick="agreeTerms()">Agree</button>
-    </div>
-    <h3 class="hidden">Thanks!</h3>
-    <div class="quick-links hidden">
-        <h3>Quick Links</h3>
-
-        <a href="https://flowscripts.github.io/editor" onclick="handleLinkClick(event)">Live Code Editor</a>
-        <a href="https://flowscripts.github.io/tutorial" onclick="handleLinkClick(event)">Tutorial</a>
-        <a href="https://flowscripts.github.io/register" onclick="handleLinkClick(event)">Register</a>
-        <a href="https://flowscripts.github.io/login" onclick="handleLinkClick(event)">Log In</a>
-        <a href="https://flowscripts.github.io/forgot" onclick="handleLinkClick(event)">Forgot Password</a>
-    </div>
-</div>
-
 <script>
     function closeTerms() {
         document.querySelector('.terms').style.transform = 'translateY(100%)';
@@ -835,7 +786,7 @@ background: linear-gradient(131deg, rgba(0,94,255,1)
             height: 100%;
             background-color: white; /* White background */
             z-index: 9999; /* Ensure it's above other content */
-            transition: opacity 0.5s ease; /* Fading effect */
+            transition: opacity 0.3s ease; /* Fading effect */
         }
     </style>
 </head>
@@ -862,18 +813,8 @@ background: linear-gradient(131deg, rgba(0,94,255,1)
   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
+
+
+
